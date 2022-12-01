@@ -5,8 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ScreenPix2"
         mc:Ignorable="d"
-        Title="Screen Pix 2" Height="150" Width="300" Loaded="Window_Loaded">
-    <Grid>
-        <Image x:Name="ScreenshotImage"/>
-    </Grid>
+        Title="Screen Pix 2" Height="170" Width="400" Loaded="Window_Loaded" Background="#721D2B40" KeyDown="Window_KeyDown" ResizeMode="NoResize">
+    <Border x:Name="StatusBorder" BorderThickness="2">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Border BorderThickness="1" BorderBrush="#FF2D2D5F" Margin="2">
+                <Image x:Name="ScreenshotImage" Margin="5"/>
+            </Border>
+
+            <Grid Grid.Column="1" Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="35"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.ColumnSpan="2" Content="Press S to toggle" Foreground="White" FontSize="10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Label Grid.ColumnSpan="2" Grid.Row="1"  Content="Color" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Label Grid.Row="2" Content="RGB" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBox Grid.Row="2" Grid.Column="1" x:Name="RGBColorTextblock" Text="0,0,0" Foreground="White" Background="Transparent" Margin="2" IsReadOnly="True" VerticalAlignment="Center"/>
+                <Label Grid.Row="3" Content="HEX" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBox Grid.Row="3" Grid.Column="1" x:Name="HexColorTextblock" Text="#ffffffff" Foreground="White" Background="Transparent" Margin="2" IsReadOnly="True" VerticalAlignment="Center"/>
+            </Grid>
+
+            <Border Grid.Column="2" BorderThickness="1" BorderBrush="#FF2D2D5F" Margin="2">
+                <Canvas x:Name="ColorCanvas" Grid.Column="2" Margin="5"/>
+            </Border>
+        </Grid>
+    </Border>
 </Window>
