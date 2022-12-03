@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ScreenPix2"
         mc:Ignorable="d"
-        Title="Screen Pix 2" Height="175" Width="400" Loaded="Window_Loaded" Background="#721D2B40" KeyDown="Window_KeyDown" ResizeMode="NoResize">
+        Title="Screen Pix 2" Height="175" Width="400" Loaded="Window_Loaded" Background="#721D2B40" KeyDown="Window_KeyDown" ResizeMode="NoResize" Icon="/ScreenPix2;component/icon.png">
     <Border x:Name="StatusBorder" BorderThickness="2">
         <Grid>
             <Grid.ColumnDefinitions>
